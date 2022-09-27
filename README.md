@@ -1,3 +1,12 @@
+run the following to build the image: `docker build -t sample:latest .`
+run the following to create a container:
+```
+docker run \
+    -it \
+    -p 3001:3000 \
+    sample:latest
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
