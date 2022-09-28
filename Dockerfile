@@ -1,21 +1,13 @@
-# pull official base image
+# Using official node image as a parent image
+
 FROM node:13.12.0-alpine
 
-# set working directory
+# Setting the working directory in container to /app
 WORKDIR /app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
-
-# add app
-COPY . ./
-
-# start app
+# Run app.py when the container launches
 CMD ["npm", "start"]
 
