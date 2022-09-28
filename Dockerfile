@@ -8,6 +8,6 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-# Run app.py when the container launches
+# Run npm start when the container launches
 CMD ["npm", "start"]
 
