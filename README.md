@@ -1,10 +1,16 @@
-run the following to build the image: `docker build -t sample:latest .`
+run the following to build the image: 
+
+```
+docker build -t app:latest .
+```
+
 run the following to create a container:
+
 ```
 docker run \
-    -it \
-    -p 3001:3000 \
-    sample:latest
+-it \
+-p 3001:3000 \
+app:latest
 ```
 
 # Getting Started with Create React App
